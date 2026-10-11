@@ -1,5 +1,5 @@
 const API_ORIGIN = window.location.protocol === "file:" ? "http://127.0.0.1:8090" : "";
-const STATIC_SITE = window.location.hostname.endsWith("github.io");
+const STATIC_SITE = [".github.io", ".netlify.app"].some((domain) => window.location.hostname.endsWith(domain));
 const STORAGE_KEY = "orbit-knowledge-documents-v1";
 const state = { busy: false, documents: [], connected: false, staticMode: STATIC_SITE };
 const $ = (selector) => document.querySelector(selector);

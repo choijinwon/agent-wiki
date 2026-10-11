@@ -4,6 +4,12 @@
 
 [GitHub Pages에서 실행하기](https://choijinwon.github.io/agent-wiki/)
 
+## Netlify
+
+저장소를 연결하면 `netlify.toml`의 설정에 따라 `knowledge_agent/static` 폴더를 게시합니다. 별도의 빌드 명령이나 패키지 설치는 필요하지 않습니다. 저장소 루트에는 `index.html`이 없으므로 루트 폴더를 게시하면 404가 발생합니다.
+
+`*.netlify.app`에서는 GitHub Pages와 동일한 브라우저 데모 모드로 문서 등록·검색·출처 표시를 사용할 수 있습니다. 문서는 현재 브라우저의 `localStorage`에 저장되며 다른 기기와 공유되지 않습니다. Python API, MCP 서버, LLM 답변 합성은 별도 서버 실행이 필요합니다.
+
 ## Features
 
 - SQLite FTS5와 한국어 서브워드 해시 벡터를 결합한 하이브리드 검색
